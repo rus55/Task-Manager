@@ -4,6 +4,7 @@ import {handleServerAppError, handleServerNetworkError} from 'utils/error-utils'
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {AppThunk} from "app/store";
 import {todolistsActions} from "features/TodolistsList/todolists-reducer";
+import {tasksActions} from "features/TodolistsList/tasks-reducer";
 
 const slice = createSlice({
     name: 'auth',
@@ -46,6 +47,7 @@ export const logoutTC = (): AppThunk => (dispatch) => {
                 dispatch(authActions.setIsLoggedIn({isLoggedIn: false}))
                 dispatch(appActions.setAppStatus({status: 'succeeded'}))
                 dispatch(todolistsActions.clearTodosData())
+                dispatch(tasksActions.clearTasksData())
             } else {
                 handleServerAppError(res.data, dispatch)
             }

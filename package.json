@@ -1,6 +1,6 @@
 {
-  "name": "TodoList",
-  "homepage": "https://rus55.github.io/TodoList/",
+  "name": "Task-Manager",
+  "homepage": "https://rus55.github.io/Task-Manager",
   "jest": {
     "moduleNameMapper": {
       "axios": "axios/dist/node/axios.cjs"
@@ -59,7 +59,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "prettier": "2.8.7"
-  }
+  "devDependencies": {}
 }
